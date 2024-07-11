@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('dashboard.layouts.app')
 
 @section('content')
 <div class="container">
@@ -18,8 +18,8 @@
                 </div>
             </div>
 
-            <div>
-                <a href="" class="btn btn-danger">View Profile</a>
+            <div class="my-4">
+                <a href="{{ url('dashboard/view-profile') }}" class="btn btn-danger">View Profile</a>
             </div>
         </div>
     </div>

@@ -26,9 +26,11 @@ Route::get('/contact-us', function(){
 
 // END
 
-Auth::routes(['verify' => true]);
+Auth::routes();
 
-Route::middleware(['auth', 'verified'])->group(function () {
+Route::middleware('auth')->group(function () {
     // Routes that require email verification
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('dashboard/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/dashboard/view-profile', [App\Http\Controllers\HomeController::class, 'userprofile']);
 });
