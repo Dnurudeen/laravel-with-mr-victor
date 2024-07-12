@@ -33,8 +33,14 @@
                 </div>
             </div>
 
-            <div class="my-4">
-                <a href="{{ url('dashboard/') }}" class="btn btn-danger"><- Go back</a>
+            <div class="my-4 d-flex justify-content-between">
+                <div class="">
+                    <a href="{{ url('dashboard/') }}" class="btn btn-danger"><- Go back</a>
+                </div>
+
+                <div class="">
+                    <a href="{{ url('dashboard/edit-profile') }}" class="btn btn-danger">Edit Profile</a>
+                </div>
             </div>
         </div>
     </div>

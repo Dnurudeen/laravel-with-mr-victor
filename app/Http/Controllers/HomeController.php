@@ -31,4 +31,8 @@ class HomeController extends Controller
         $user = Auth::user();
         return view('/dashboard/view-profile', compact('user'));
     }
+    public function editprofile(){
+        $user = Auth::user();
+        return view('/dashboard/edit-profile', compact('user'));
+    }
 }
