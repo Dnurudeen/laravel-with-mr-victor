@@ -35,4 +35,15 @@ class HomeController extends Controller
         $user = Auth::user();
         return view('/dashboard/edit-profile', compact('user'));
     }
+    public function update(Request $request){
+        $user = Auth::user();
+
+        $user->name = $request->input('fullname');
+        $user->email = $request->input('email');
+        $user->username = $request->input('username');
+
+        $user->update($request->all());
+
+        return redirect()->back()->with('success', 'User Information Successfully Updated');
+    }
 }
